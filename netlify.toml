@@ -5,7 +5,8 @@
   from = "/api/*"
   
   # The actual URL of your backend server
-  to = "https://anandmaya-backend.onrender.com/api/:splat"
+  to = "https://anandmaya-backend.onrender.com/:splat"
+  # initial : to = "https://anandmaya-backend.onrender.com/api/:splat"
   
   # A 200 status code means this is a "rewrite" or "proxy"
   status = 200
