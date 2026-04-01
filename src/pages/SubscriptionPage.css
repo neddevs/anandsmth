@@ -1,0 +1,119 @@
+.subscription-page {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+.subscription-page .section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.subscription-page .section-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+}
+
+.plans-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.plan-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  width: 350px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.plan-card.highlight {
+  border-color: #8B4513;
+  transform: translateY(-10px);
+}
+
+.highlight-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #8B4513;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.plan-card h3 {
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+
+.plan-card .price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #8B4513;
+  margin: 1rem 0;
+}
+
+.plan-card .duration {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  text-align: left;
+}
+
+.features-list li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.features-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #28a745;
+  font-weight: 600;
+}
+
+.btn-subscribe {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  background-color: #8B4513;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-subscribe:disabled {
+  background-color: #aeb9c6;
+  cursor: not-allowed;
+}
+
+.plan-card.highlight .btn-subscribe {
+  background-color: #a0522d;
+}
+
+.free-plan-promo {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+}

@@ -1,0 +1,138 @@
+.service-section {
+  padding: 6rem 0;
+  /* 
+    Instead of a solid color, we use our --bg-color variable (#fdfaf6) 
+    with a high opacity (e.g., 0.85 for 85% opaque) to let the background show through.
+    We also add a backdrop-filter for a "frosted glass" effect.
+  */
+  background-color: rgba(253, 250, 246, 0.15);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  overflow: hidden; /* Prevents animations from showing scrollbars */
+}
+
+/* Create an alternating background color for visual rhythm */
+.service-section.alt {
+  background-color: rgba(247, 242, 236, 0.15); /* --subtle-bg-color with opacity */
+}
+
+.service-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem; /* Increased gap for a more spacious feel */
+  align-items: center;
+}
+
+/* The reverse logic remains the same */
+.service-content.reverse {
+  direction: rtl;
+}
+.service-content.reverse > * {
+  direction: ltr;
+}
+
+.service-text h3 {
+  font-family: var(--heading-font);
+  font-size: 2.5rem; /* Larger, more impactful heading */
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.service-text p {
+  font-family: var(--body-font);
+  font-size: 1.1rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.service-features {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2.5rem;
+}
+
+.service-features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.service-features li i {
+  color: var(--secondary-color); /* Use the lighter terracotta for checkmarks */
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+/* 
+  The old .service-image container is kept, but the .image-placeholder
+  inside it is completely redesigned to hold a real image.
+*/
+.service-image .image-placeholder {
+  width: 100%;
+  height: 450px;
+  border-radius: 12px;
+  /* Remove the old linear-gradient background */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden; /* Ensure the image respects the border-radius */
+  
+  /* Remove old flex properties for icons */
+}
+
+.service-image .image-placeholder:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* NEW class for the actual image inside the placeholder */
+.service-image .image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This is key for making images look good */
+}
+
+/* Remove old styles for icon-based placeholders */
+.service-image .image-placeholder i,
+.service-image .image-placeholder p {
+  display: none;
+}
+
+/* Keep customImage styles for components like Logo and YogaSymbol */
+.bhakti-yoga-logo-container, .bhakti-store-logo-container {
+  /* These can remain as they are, but will look better inside the new placeholder */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--subtle-bg-color); /* Give them a subtle background */
+}
+
+.bhakti-yoga-text, .bhakti-store-text {
+  color: var(--primary-color); /* Use the new theme color */
+  font-family: var(--heading-font);
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .service-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .service-content.reverse {
+    direction: ltr;
+  }
+  .service-text {
+    text-align: center;
+  }
+  .service-features {
+    display: inline-block;
+    text-align: left;
+  }
+}

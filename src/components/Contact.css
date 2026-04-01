@@ -1,0 +1,95 @@
+.contact {
+  /* Use rgba to make the background translucent, matching the Service Sections */
+  background-color: rgba(253, 250, 246, 0.55); /* --bg-color with opacity */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 6rem 0;
+  position: relative;
+  z-index: 1; /* Ensure it stays above the background carousel */
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem; /* Increased gap for a more spacious feel */
+  align-items: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; /* Increased gap */
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem; /* Increased gap */
+}
+
+.contact-item i {
+  font-size: 1.8rem; /* Larger icon */
+  color: var(--primary-color);
+  margin-top: 5px;
+  width: 30px; /* Give it a fixed width for alignment */
+  text-align: center;
+}
+
+.contact-item h4 {
+  font-family: var(--heading-font);
+  font-size: 1.3rem;
+  color: var(--text-color);
+  margin: 0 0 0.5rem 0;
+}
+
+.contact-item p {
+  color: var(--text-color);
+  opacity: 0.8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Updated styling for the new 'mailto' prompt area */
+.contact-form {
+  background: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 3rem; /* More padding */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center content */
+  text-align: center;
+}
+
+/* This is the new prompt text that replaces the form fields */
+.contact-prompt {
+  font-family: var(--body-font);
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* The 'Send an Email' button inherits styles from .btn and .btn-primary */
+/* We can add specific styles if needed, but it should look good already */
+
+
+/* Hide old, unused form group styles */
+/* .form-group,
+.form-group input,
+.form-group textarea {
+  display: none;
+} */
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

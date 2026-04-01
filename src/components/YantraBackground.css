@@ -1,0 +1,233 @@
+/* Yantra Background Container */
+.yantra-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* Individual Yantra Symbols */
+.yantra-symbol {
+  position: absolute;
+  opacity: 0.4;
+  animation: yantraFloat 20s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
+/* Yantra Frame - Square with T-shaped extensions */
+.yantra-frame {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  border: 3px solid var(--color);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+  box-shadow: 
+    0 0 30px rgba(255, 255, 255, 0.2),
+    0 0 60px var(--color),
+    inset 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+/* T-shaped extensions on each side */
+.yantra-frame::before,
+.yantra-frame::after {
+  content: '';
+  position: absolute;
+  background: var(--color);
+  border-radius: 3px;
+  box-shadow: 0 0 15px var(--color);
+}
+
+.yantra-frame::before {
+  width: 30px;
+  height: 12px;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 
+    0 0 15px var(--color),
+    0 30px 0 var(--color),
+    0 60px 0 var(--color),
+    0 90px 0 var(--color);
+}
+
+.yantra-frame::after {
+  width: 12px;
+  height: 30px;
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 
+    30px 0 0 var(--color),
+    60px 0 0 var(--color),
+    90px 0 0 var(--color);
+}
+
+/* Yantra Inner Circle */
+.yantra-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Geometric Symbol */
+.yantra-geometric {
+  width: 100%;
+  height: 100%;
+  color: var(--color);
+  animation: yantraGlow 4s ease-in-out infinite;
+  animation-delay: var(--delay);
+  filter: drop-shadow(0 0 10px var(--color));
+}
+
+.yantra-geometric svg {
+  width: 100%;
+  height: 100%;
+}
+
+.yantra-geometric svg * {
+  filter: drop-shadow(0 0 5px currentColor);
+}
+
+/* Positioning for different yantras */
+.yantra-ganesha {
+  top: 10%;
+  left: 5%;
+  transform: rotate(15deg);
+}
+
+.yantra-durga {
+  top: 15%;
+  right: 8%;
+  transform: rotate(-20deg);
+}
+
+.yantra-sri {
+  top: 25%;
+  left: 15%;
+  transform: rotate(45deg);
+}
+
+.yantra-kamala {
+  top: 30%;
+  right: 20%;
+  transform: rotate(-15deg);
+}
+
+.yantra-tara {
+  top: 45%;
+  left: 8%;
+  transform: rotate(30deg);
+}
+
+.yantra-sri-chakra {
+  top: 50%;
+  right: 12%;
+  transform: rotate(-45deg);
+}
+
+.yantra-bagala {
+  top: 60%;
+  left: 25%;
+  transform: rotate(60deg);
+}
+
+.yantra-bhubaneshwar {
+  top: 65%;
+  right: 25%;
+  transform: rotate(-30deg);
+}
+
+.yantra-matangi {
+  top: 75%;
+  left: 12%;
+  transform: rotate(20deg);
+}
+
+.yantra-tripura {
+  top: 80%;
+  right: 15%;
+  transform: rotate(-60deg);
+}
+
+.yantra-kali {
+  top: 85%;
+  left: 35%;
+  transform: rotate(40deg);
+}
+
+.yantra-shiva {
+  top: 90%;
+  right: 35%;
+  transform: rotate(-40deg);
+}
+
+/* Animations */
+@keyframes yantraFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(var(--rotation, 0deg));
+    opacity: 0.4;
+  }
+  25% {
+    transform: translateY(-20px) rotate(calc(var(--rotation, 0deg) + 10deg));
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-10px) rotate(var(--rotation, 0deg));
+    opacity: 0.7;
+  }
+  75% {
+    transform: translateY(-30px) rotate(calc(var(--rotation, 0deg) - 10deg));
+    opacity: 0.5;
+  }
+}
+
+@keyframes yantraGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px var(--color)) drop-shadow(0 0 20px var(--color));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px var(--color)) drop-shadow(0 0 40px var(--color)) drop-shadow(0 0 60px var(--color));
+    transform: scale(1.2);
+  }
+}
+
+/* Hover Effects */
+.yantra-symbol:hover {
+  opacity: 0.9;
+  transform: scale(1.5) rotate(calc(var(--rotation, 0deg) + 180deg));
+  transition: all 0.5s ease;
+  filter: brightness(1.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .yantra-frame {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .yantra-symbol {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 480px) {
+  .yantra-frame {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .yantra-symbol {
+    opacity: 0.25;
+  }
+}

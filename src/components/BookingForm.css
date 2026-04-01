@@ -1,0 +1,138 @@
+/* Booking Form - New Redesigned Styles */
+
+.booking-form-section {
+  /* This will inherit the translucent background from its parent (.pooja-main-content) */
+}
+
+/* 
+  The container now has a semi-transparent white background 
+  to sit cleanly on top of the page's translucent background.
+*/
+.booking-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--text-color);
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 14px 16px;
+  border: 1px solid #dcdcdc; /* Lighter border */
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: var(--body-font);
+  background-color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(197, 138, 83, 0.2); /* A soft glow effect */
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: #ff4444;
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 1.2em;
+  height: 1.2em;
+  accent-color: var(--primary-color);
+  margin: 0;
+}
+
+/* Use the global .btn and .btn-primary styles */
+.btn-large {
+  padding: 16px;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* For Tablets */
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr; /* Stack columns */
+    gap: 1.5rem; /* Keep the same gap */
+  }
+  
+  .booking-form-container {
+    padding: 2rem;
+  }
+}
+
+/* For Mobile Phones */
+@media (max-width: 480px) {
+  .booking-form-container {
+    padding: 1.5rem;
+    /* Remove backdrop-filter on mobile for better performance if needed */
+    /* backdrop-filter: none; */
+    /* -webkit-backdrop-filter: none; */
+    background: rgba(255, 255, 255, 0.9); /* Make it more opaque */
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 14px;
+  }
+}

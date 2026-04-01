@@ -1,0 +1,107 @@
+.online-pooja-page {
+  padding-top: 80px;
+  position: relative;
+  /* background-color: var(--bg-color); */
+}
+
+/* 
+  This ::before pseudo-element creates the fixed background image.
+  It's placed behind the content and does not scroll.
+*/
+.online-pooja-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  /* Place it behind everything */
+  background-image: url('https://images.unsplash.com/photo-1625072290979-cac544181be8?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* This is what makes it not scroll */
+}
+
+/* 
+  A semi-transparent overlay on top of the background image,
+  which also provides the blur effect.
+*/
+.online-pooja-page::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background-color: rgba(253, 250, 246, 0.1);
+  /* --bg-color with opacity */
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+
+/* --- New Compact Hero Header Styles --- */
+.pooja-page-header {
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.pooja-page-header h1 {
+  font-family: var(--heading-font);
+  font-size: 6rem;
+  color: #ef9149;
+  margin-bottom: 0.5rem;
+}
+
+.pooja-page-header p {
+  font-size: 1.5rem;
+  color: white;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+/* --- Main Content Wrapper --- */
+/* This wrapper will contain all the sections below the header */
+.pooja-main-content {
+  position: relative;
+  /* Ensure it sits on top of the pseudo-elements */
+  z-index: 1;
+}
+
+/* Apply translucent background to each direct child section */
+/* .pooja-main-content > * { */
+  /* padding: 4rem 0; */
+  /* background-color: rgba(247, 242, 236, 0.1); Translucent --subtle-bg-color */
+/* } */
+
+/* Make alternating sections a different shade */
+/* .pooja-main-content > *:nth-child(even) { */
+   /* background-color: rgba(253, 250, 246, 0.1); Translucent --bg-color */
+/* } */
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+
+@media (max-width: 768px) {
+  .pooja-page-header h1 {
+    font-size: 3rem;
+  }
+  .pooja-page-header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pooja-page-header h1 {
+    font-size: 2.5rem;
+  }
+  .pooja-page-header p {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,329 @@
+/* Yoga Schedule Section */
+.yoga-schedule {
+  padding: 6rem 0;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.schedule-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  color: white;
+}
+
+.schedule-header h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #fff 0%, #e0e7ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.schedule-header p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.schedule-day {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.schedule-day:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.day-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem;
+  text-align: center;
+}
+
+.day-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.day-classes {
+  padding: 1rem;
+}
+
+.class-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.class-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.class-item:last-child {
+  margin-bottom: 0;
+}
+
+.class-time {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fbbf24;
+  min-width: 80px;
+  text-align: center;
+  padding: 0.3rem;
+  background: rgba(251, 191, 36, 0.1);
+  border-radius: 5px;
+}
+
+.class-details {
+  flex: 1;
+  color: white;
+}
+
+.class-type {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #e0e7ff;
+}
+
+.class-instructor {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0.3rem;
+}
+
+.class-level {
+  font-size: 0.8rem;
+  color: #10b981;
+  font-weight: 500;
+  padding: 0.2rem 0.5rem;
+  background: rgba(16, 185, 129, 0.1);
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.schedule-info {
+  margin-top: 3rem;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.info-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.info-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00BCD4 0%, #0097A7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  box-shadow: 0 8px 20px rgba(0, 188, 212, 0.3);
+}
+
+.info-icon i {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.info-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #00BCD4;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .yoga-schedule {
+    padding: 4rem 0;
+  }
+  
+  .schedule-header h2 {
+    font-size: 2.5rem;
+  }
+  
+  .schedule-header p {
+    font-size: 1.1rem;
+  }
+  
+  .schedule-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .day-classes {
+    padding: 0.8rem;
+  }
+  
+  .class-item {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.8rem;
+  }
+  
+  .class-time {
+    min-width: auto;
+    text-align: left;
+  }
+  
+  .info-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .info-card {
+    padding: 1.5rem;
+  }
+  
+  .info-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .info-icon i {
+    font-size: 1.5rem;
+  }
+  
+  .info-card h4 {
+    font-size: 1.1rem;
+  }
+  
+  .info-card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .yoga-schedule {
+    padding: 3rem 0;
+  }
+  
+  .schedule-header h2 {
+    font-size: 2rem;
+  }
+  
+  .schedule-header p {
+    font-size: 1rem;
+  }
+  
+  .day-header {
+    padding: 0.8rem;
+  }
+  
+  .day-name {
+    font-size: 1.1rem;
+  }
+  
+  .day-classes {
+    padding: 0.6rem;
+  }
+  
+  .class-item {
+    padding: 0.6rem;
+  }
+  
+  .class-type {
+    font-size: 0.9rem;
+  }
+  
+  .class-instructor {
+    font-size: 0.8rem;
+  }
+  
+  .class-level {
+    font-size: 0.7rem;
+  }
+  
+  .info-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .info-card {
+    padding: 1rem;
+  }
+  
+  .info-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .info-icon i {
+    font-size: 1.3rem;
+  }
+  
+  .info-card h4 {
+    font-size: 1rem;
+  }
+  
+  .info-card p {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+

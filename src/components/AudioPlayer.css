@@ -1,0 +1,47 @@
+/* Audio Player Styles */
+.audio-player {
+  position: relative;
+  display: inline-block;
+}
+
+.audio-control-btn {
+  background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+}
+
+.audio-control-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+}
+
+.audio-control-btn:active {
+  transform: scale(0.95);
+}
+
+.audio-control-btn i {
+  margin-left: 2px; /* Slight offset for play icon */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

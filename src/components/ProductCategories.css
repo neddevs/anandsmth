@@ -1,0 +1,62 @@
+.product-categories {
+  /* This section will inherit its background from the parent (.store-main-content) */
+  padding: 2rem 0;
+  border-bottom: 1px solid #e0d9d0; /* A subtle separator line */
+}
+
+.categories-container {
+  display: flex;
+  justify-content: center; /* Center the categories horizontally */
+  align-items: center;
+  flex-wrap: wrap; /* Allow categories to wrap on smaller screens */
+  gap: 1rem;
+}
+
+.category-btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 30px; /* Pill shape */
+  padding: 10px 20px;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  opacity: 0.7;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  position: relative; /* Needed for the active indicator's animation */
+}
+
+.category-btn:hover {
+  opacity: 1;
+  color: var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.category-btn i {
+  /* No change needed, Font Awesome icons will inherit the color */
+}
+
+/* --- Styling for the ACTIVE category button --- */
+.category-btn.active {
+  color: var(--primary-color);
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* 
+  This pseudo-element creates the animated underline for the active button.
+  We will control it with Framer Motion in the component file.
+*/
+.active-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}

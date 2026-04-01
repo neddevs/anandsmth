@@ -1,0 +1,122 @@
+/* Pooja Types Section */
+.pooja-types {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.pooja-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.pooja-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.pooja-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: #8B4513;
+}
+
+.pooja-card.featured {
+  border-color: #FFD700;
+  transform: scale(1.05);
+}
+
+.pooja-card.featured:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.pooja-badge {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: #FFD700;
+  color: #8B4513;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.pooja-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #8B4513, #D2691E);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.pooja-card:hover .pooja-icon {
+  transform: scale(1.1);
+}
+
+.pooja-icon i {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.pooja-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.pooja-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.pooja-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #8B4513;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pooja-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pooja-card.featured {
+    transform: none;
+  }
+  
+  .pooja-card.featured:hover {
+    transform: translateY(-10px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

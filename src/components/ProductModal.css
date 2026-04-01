@@ -1,0 +1,151 @@
+/* Product Modal - New Redesigned Styles */
+
+.product-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.product-modal-content {
+  background: var(--bg-color); /* Use the theme's off-white */
+  border-radius: 15px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two-column layout */
+  position: relative; /* For the close button */
+}
+
+.modal-image-section {
+  width: 100%;
+  height: 500px; /* Fixed height for consistency */
+  border-radius: 15px 0 0 15px;
+  overflow: hidden;
+}
+
+.modal-image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-details-section {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.modal-close-btn:hover {
+  color: #333;
+}
+
+.modal-category {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.modal-product-name {
+  font-family: var(--heading-font);
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin: 0 0 1rem 0;
+}
+
+.modal-product-description {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  opacity: 0.8;
+  line-height: 1.7;
+  flex-grow: 1; /* Pushes the price and buttons down */
+  margin-bottom: 1.5rem;
+}
+
+.modal-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Re-use primary button styles */
+.modal-actions .btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.btn-add-to-cart {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+.btn-add-to-cart:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-buy-now {
+  background-color: var(--primary-color);
+  color: white;
+  border: 2px solid var(--primary-color);
+}
+.btn-buy-now:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .product-modal-content {
+    grid-template-columns: 1fr; /* Stack columns on mobile */
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+  .modal-image-section {
+    height: 300px;
+    border-radius: 15px 15px 0 0;
+  }
+  .modal-details-section {
+    padding: 2rem;
+  }
+  .modal-product-name {
+    font-size: 1.8rem;
+  }
+  .modal-price {
+    font-size: 1.6rem;
+  }
+}

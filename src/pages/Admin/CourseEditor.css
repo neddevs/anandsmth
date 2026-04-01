@@ -1,0 +1,128 @@
+.course-editor-container {
+  padding: 1.5rem;
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.editor-header h2 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+}
+
+.editor-header h2 span {
+  color: #8B4513;
+}
+
+.back-link {
+  color: #495057;
+  text-decoration: none;
+  font-weight: 500;
+}
+.back-link i {
+  margin-right: 8px;
+}
+
+.curriculum-manager {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  padding: 2rem;
+}
+
+.curriculum-manager h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.modules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.module-item {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #e9ecef;
+}
+
+.module-item h4 {
+  margin: 0 0 0.5rem 0;
+}
+
+.module-item p {
+  margin: 0;
+  color: #6c757d;
+}
+
+.btn-add-item {
+  background: none;
+  border: 2px dashed #ced4da;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 100%;
+  color: #6c757d;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-add-item:hover {
+  background-color: #e9ecef;
+  color: #343a40;
+  border-color: #adb5bd;
+}
+
+.module-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.item-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.lessons-list {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid #e9ecef;
+}
+.lesson-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-bottom: 0.5rem;
+}
+.lesson-title {
+  font-weight: 500;
+}
+.lesson-title i {
+  margin-right: 10px;
+  color: #8B4513;
+}
+.btn-add-item-small {
+  background: none;
+  border: none;
+  color: #3c82f6;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}

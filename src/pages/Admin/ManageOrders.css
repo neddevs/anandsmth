@@ -1,0 +1,118 @@
+.manage-orders-container {
+  padding: 1.5rem;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.header-section h2 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+}
+
+.orders-table-wrapper {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.orders-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: #495057;
+}
+
+.orders-table td small {
+  color: #6c757d;
+  font-size: 0.8rem;
+  word-break: break-all;
+}
+
+/* Re-use status badge styles */
+.status-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.status-paid {
+  background-color: #28a745;
+}
+
+.status-pending {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.status-failed {
+  background-color: #dc3545;
+}
+
+
+.status-select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+}
+
+.status-bg-processing {
+  background-color: #ffc107;
+  color: #333;
+  border-color: #ffc107;
+}
+
+.status-bg-shipped {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.status-bg-delivered {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.status-bg-cancelled {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+}
+
+.address-cell {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  white-space: nowrap;
+  /* Prevents long addresses from wrapping awkwardly */
+}

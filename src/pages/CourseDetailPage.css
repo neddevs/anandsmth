@@ -1,0 +1,239 @@
+.course-detail-page {
+  background-color: #f8f9fa;
+  padding-bottom: 4rem;
+}
+
+.course-hero {
+  height: 40vh;
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  color: #fff;
+  width: 100%;
+  padding: 2rem;
+}
+
+/* This helps align the hero text with the main container on wider screens */
+@media (min-width: 1200px) {
+  .hero-overlay {
+    padding-left: calc((100vw - 1140px) / 2);
+  }
+}
+
+.hero-overlay h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero-overlay p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.hero-overlay .tier-badge {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.course-content-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+@media (min-width: 992px) {
+  .course-content-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.course-main-content {
+  flex-grow: 1;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.course-main-content h1 {
+  margin-top: 0;
+  margin-bottom: 3.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.course-main-content h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.curriculum-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.module-section {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.module-title {
+  background-color: #fafafa;
+  padding: 1rem 1.5rem;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.lesson-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lesson-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.lesson-list li i {
+  color: #8B4513;
+  width: 20px;
+  text-align: center;
+}
+
+.lesson-duration {
+  margin-left: auto;
+  font-size: 0.9rem;
+  color: #666;
+  background-color: #f1f3f5;
+  padding: 3px 8px;
+  border-radius: 10px;
+}
+
+.course-sidebar {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+@media (min-width: 992px) {
+  .course-sidebar {
+    width: 320px;
+    position: sticky;
+    top: 100px;
+    /* Adjust based on navbar height */
+  }
+}
+
+.enroll-box {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* --- NEWLY ADDED STYLE --- */
+.sidebar-thumbnail {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.enroll-box-content {
+  padding: 1.5rem;
+}
+
+.enroll-box h3 {
+  margin-top: 0;
+}
+
+.btn-enroll,
+.btn-subscribe {
+  width: 100%;
+  display: inline-block;
+  padding: 1rem;
+  border: none;
+  background-color: #8B4513;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn-enroll:hover,
+.btn-subscribe:hover {
+  background-color: #a0522d;
+}
+
+.btn-enroll:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.sidebar-note {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.sidebar-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 0.75rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Style for the small lock badge next to a module title */
+.tier-badge-small {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 15px;
+  color: #fff;
+  margin-left: 10px;
+  vertical-align: middle; /* Aligns the badge nicely with the text */
+}
+
+.tier-badge-small i {
+  margin-right: 4px;
+  font-size: 0.7rem;
+}
+
+/* Re-use the same color scheme as the main tier badges */
+.tier-badge-small.tier-plus {
+  background-color: #17a2b8;
+}
+
+.tier-badge-small.tier-premium {
+  background-color: #6f42c1; 
+}
+
+.module-title {
+  background-color: #fafafa;
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.2rem;
+  display: flex; 
+  align-items: center;
+}

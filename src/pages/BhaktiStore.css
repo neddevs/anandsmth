@@ -1,0 +1,161 @@
+/* Bhakti Store Page - New Redesigned Styles */
+
+.bhakti-store-page {
+  padding-top: 80px;
+  position: relative;
+}
+
+/* 
+  This ::before pseudo-element creates the fixed background image.
+  It is placed behind all content and does not scroll.
+*/
+.bhakti-store-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background-image: url('https://images.unsplash.com/photo-1605291236306-1097e41d8e37?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* 
+  This ::after pseudo-element creates the translucent "frosted glass" overlay
+  on top of the background image, ensuring text readability.
+*/
+.bhakti-store-page::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background-color: rgba(253, 250, 246, 0.1); /* --bg-color with high opacity */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* New Compact Header Styles */
+.store-page-header {
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.store-page-header h1 {
+  font-family: var(--heading-font);
+  font-size: 6rem;
+  color: #ef9149;
+  margin-bottom: 0.5rem;
+}
+
+.store-page-header p {
+  font-size: 1.5rem;
+  /* color: var(--text-color); */
+  color: white;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Main Content Wrapper */
+/* This wrapper contains the category filters and product grid */
+.store-main-content {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(247, 242, 236, 0.1); /* Translucent --subtle-bg-color */
+  padding-bottom: 4rem;
+}
+
+
+/* --- Custom Toast Notification Styles --- */
+.toast-container {
+  max-width: 400px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: stretch;
+  border: 1px solid #f0f0f0;
+}
+
+.toast-image {
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+  border-radius: 8px 0 0 8px;
+}
+
+.toast-text {
+  flex-grow: 1;
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.toast-text p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.toast-text span {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: #6B7280;
+  display: block;
+}
+
+.toast-button {
+  border: none;
+  border-radius: 0 8px 8px 0;
+  padding: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  background: var(--subtle-bg-color);
+  cursor: pointer;
+  border-left: 1px solid #e5e7eb;
+  transition: background-color 0.2s;
+}
+
+.toast-button:hover {
+  background-color: #e0d9d0;
+}
+
+/* The cart-toggle button is now globally managed by Navbar.css */
+/* We can hide any leftover styles from this page to be safe. */
+.cart-toggle {
+  display: none !important;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+  .store-page-header h1 {
+    font-size: 3rem;
+  }
+  .store-page-header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .store-page-header {
+    padding: 3rem 1rem;
+  }
+  .store-page-header h1 {
+    font-size: 2.5rem;
+  }
+  .store-page-header p {
+    font-size: 0.9rem;
+  }
+}

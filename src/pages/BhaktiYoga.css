@@ -1,0 +1,210 @@
+/* Bhakti Yoga Page - Final Redesigned Styles */
+
+.bhakti-yoga-page {
+  padding-top: 100px;
+  position: relative;
+}
+
+body{
+  padding-top: 100px;
+}
+
+/* PageBackground component handles the fixed image and overlay */
+
+/* Header */
+.yoga-page-header {
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.yoga-page-header h1 {
+  font-family: var(--heading-font);
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+.yoga-page-header p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Main Content Area */
+.yoga-main-content {
+  position: relative;
+  z-index: 1;
+  background-color: var(--bg-color);
+  padding: 4rem 0;
+}
+
+.catalogues-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.catalogue-section {
+  background-color: #ffffff;
+  border: 1px solid #e0d9d0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.catalogue-header {
+  padding: 2rem 2.5rem;
+  background-color: var(--subtle-bg-color);
+  border-bottom: 1px solid #e0d9d0;
+}
+
+.catalogue-title {
+  font-family: var(--heading-font);
+  font-size: 2.2rem;
+  color: var(--text-color);
+  margin: 0 0 0.5rem 0;
+  text-align: left;
+}
+
+.catalogue-description {
+  font-size: 1.1rem;
+  color: #777;
+  text-align: left;
+  margin: 0;
+  max-width: 100%;
+}
+
+/* --- REDESIGNED COURSE GRID & CARDS --- */
+
+.course-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column for list layout */
+  gap: 1.5rem;
+  padding: 2.5rem;
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.card-link-wrapper {
+  text-decoration: none;
+  color: inherit;
+  display: grid;
+  grid-template-columns: 200px 1fr; /* Fixed image column, flexible text column */
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.card-thumbnail {
+  width: 200px;
+  height: 100%;
+  position: static;
+  border-radius: 12px 0 0 12px;
+  overflow: hidden;
+}
+
+.card-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hide the old tier badge on the thumbnail */
+.card-thumbnail .tier-badge {
+  display: none;
+}
+
+.card-text-content {
+  padding: 1.5rem 1.5rem 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.course-level {
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* New styling for the tier badge in the text content */
+.card-text-content .tier-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+}
+.tier-free { background-color: #28a745; }
+.tier-plus { background-color: #17a2b8; }
+.tier-premium { background-color: #6f42c1; }
+
+.card-text-content h3 {
+  font-family: var(--heading-font);
+  margin: 0 0 0.8rem 0;
+  font-size: 1.4rem;
+  line-height: 1.3;
+}
+
+.course-description {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.no-results-message {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.video-player-wrapper {
+  margin-top: 20px;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+  .yoga-page-header h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-link-wrapper {
+    /* Stack image on top of text on small screens */
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .card-thumbnail {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px 12px 0 0;
+  }
+  .card-text-content {
+    padding: 1.5rem;
+  }
+}

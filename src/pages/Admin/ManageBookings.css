@@ -1,0 +1,153 @@
+.manage-bookings-container {
+  padding: 1.5rem;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.header-section h2 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+}
+
+.bookings-table-wrapper {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  overflow-x: auto;
+}
+
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bookings-table th, .bookings-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.bookings-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: #495057;
+}
+
+.bookings-table tbody tr:hover {
+  background-color: #f1f3f5;
+}
+
+.bookings-table td small {
+  color: #6c757d;
+  font-size: 0.8rem;
+}
+
+.status-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: capitalize;
+}
+.status-paid, .status-completed { background-color: #28a745; }
+.status-pending { background-color: #ffc107; color: #333; }
+.status-failed { background-color: #dc3545; }
+.status-confirmed { background-color: #17a2b8; }
+.status-cancelled { background-color: #6c757d; }
+
+.action-btn {
+  background: none;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.action-btn:hover:not(:disabled) {
+  background-color: #3c82f6;
+  color: white;
+  border-color: #3c82f6;
+}
+
+.action-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pagination-controls button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #dee2e6;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.special-request-cell {
+  /* Set a maximum width for this column */
+  max-width: 250px; 
+}
+
+.scrollable-text {
+  max-height: 100px; /* Limit the height to about 4-5 lines of text */
+  overflow-y: auto; /* Show a scrollbar ONLY if the content overflows */
+  
+  /* Styling for the scrollbar */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #ccc #f1f1f1; /* For Firefox */
+  
+  font-size: 0.85rem;
+  line-height: 1.5;
+  white-space: pre-wrap; /* Respects line breaks and wraps text */
+  padding-right: 5px; /* Add some space for the scrollbar */
+}
+
+/* Webkit (Chrome, Safari) scrollbar styling */
+.scrollable-text::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollable-text::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.scrollable-text::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.scrollable-text::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}

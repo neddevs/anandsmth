@@ -1,0 +1,14 @@
+# This rule tells Netlify how to handle API requests.
+
+[[redirects]]
+  # The path on your Netlify site that you want to proxy
+  from = "/api/*"
+  
+  # The actual URL of your backend server
+  to = "https://anandmaya-backend.onrender.com/api/:splat"
+  
+  # A 200 status code means this is a "rewrite" or "proxy"
+  status = 200
+  
+  # This is important to ensure the proxy works correctly
+  force = true

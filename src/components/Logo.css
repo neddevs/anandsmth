@@ -1,0 +1,249 @@
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Size Variations */
+.logo-small {
+  gap: 8px;
+}
+
+.logo-small .logo-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.logo-small .logo-text {
+  font-size: 1rem;
+}
+
+.logo-medium {
+  gap: 12px;
+}
+
+.logo-medium .logo-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.logo-medium .logo-text {
+  font-size: 1.2rem;
+}
+
+.logo-large {
+  gap: 16px;
+}
+
+.logo-large .logo-icon {
+  width: 64px;
+  height: 64px;
+}
+
+.logo-large .logo-text {
+  font-size: 1.5rem;
+}
+
+.logo-xlarge {
+  gap: 20px;
+}
+
+.logo-xlarge .logo-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.logo-xlarge .logo-text {
+  font-size: 2rem;
+}
+
+/* Logo Icon */
+.logo-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  /* background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF8C00 100%); */
+  box-shadow: 
+    0 0 20px rgba(255, 215, 0, 0.3),
+    inset 0 0 20px rgba(255, 255, 255, 0.2);
+  animation: logoGlow 3s ease-in-out infinite alternate;
+}
+
+/* Energy Rings */
+.energy-ring {
+  position: absolute;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 50%;
+  animation: energyPulse 3s ease-in-out infinite;
+}
+
+.energy-ring-1 {
+  width: 120%;
+  height: 120%;
+  animation-delay: 0s;
+}
+
+.energy-ring-2 {
+  width: 150%;
+  height: 150%;
+  animation-delay: 1s;
+}
+
+.energy-ring-3 {
+  width: 180%;
+  height: 180%;
+  animation-delay: 2s;
+}
+
+/* Logo Text */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo-title {
+  font-weight: 700;
+  color: #8B4513;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.logo-subtitle {
+  font-weight: 400;
+  color: #D2691E;
+  font-size: 0.7em;
+  margin-top: -2px;
+}
+
+/* Animations */
+@keyframes logoGlow {
+  0% {
+    box-shadow: 
+      0 0 20px rgba(255, 215, 0, 0.3),
+      inset 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 
+      0 0 30px rgba(255, 215, 0, 0.5),
+      inset 0 0 25px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes lotusFloat {
+  0%, 100% {
+    transform: scale(1) rotate(var(--rotation, 0deg));
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1) rotate(var(--rotation, 0deg));
+    opacity: 1;
+  }
+}
+
+@keyframes centerPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 
+      0 0 15px rgba(255, 215, 0, 0.6),
+      inset 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 
+      0 0 20px rgba(255, 215, 0, 0.8),
+      inset 0 0 15px rgba(255, 255, 255, 0.4);
+  }
+}
+
+@keyframes omRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes energyPulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Hover Effects */
+.logo-container:hover .logo-icon {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.logo-container:hover .lotus-petal {
+  animation-duration: 2s;
+}
+
+.logo-container:hover .energy-ring {
+  animation-duration: 1.5s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .logo-container {
+    gap: 8px;
+  }
+  
+  .logo-medium .logo-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .logo-medium .logo-text {
+    font-size: 1rem;
+  }
+  
+  .om-symbol {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container {
+    gap: 6px;
+  }
+  
+  .logo-medium .logo-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .logo-medium .logo-text {
+    font-size: 0.9rem;
+  }
+  
+  .logo-subtitle {
+    font-size: 0.6em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

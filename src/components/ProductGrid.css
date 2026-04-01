@@ -1,0 +1,121 @@
+.product-grid-section {
+  padding: 4rem 0;
+  /* This section will inherit its background from the parent (.store-main-content) */
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.no-products-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #777;
+  padding: 3rem;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  display: flex; /* <-- 1. This is the key for uniform height */
+  flex-direction: column; /* Stack image and info vertically */
+  
+  /* --- 4. FASTER HOVER EFFECT --- */
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.product-card:hover {
+  transform: translateY(-10px); /* A more noticeable lift */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.product-image-container {
+  height: 250px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.1);
+}
+
+.product-info {
+  padding: 1.5rem;
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column;
+  flex-grow: 1; /* <-- 1. This makes the info section fill available space */
+}
+
+.product-name {
+  font-family: var(--heading-font);
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+  cursor: pointer;
+  
+  /* --- 2. TRUNCATE TEXT TO A SINGLE LINE --- */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative; /* <-- 3. Required for the tooltip */
+}
+
+/* --- 3. REVEAL FULL NAME ON HOVER --- */
+.product-name:hover::after {
+  content: attr(data-full-name); /* This will be set in the JS file */
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  white-space: normal; /* Allow the tooltip to wrap text */
+  z-index: 10;
+  margin-top: 5px;
+  width: max-content; /* Make the tooltip as wide as its content */
+  max-width: 250px; /* But not too wide */
+}
+
+.product-category {
+  font-size: 0.85rem;
+  color: #999;
+  margin: 0 0 1rem 0;
+}
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  margin-top: auto; /* <-- 1. Pushes the price and button to the bottom */
+}
+
+.btn-add-to-cart {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-add-to-cart:hover {
+  background-color: var(--secondary-color);
+}

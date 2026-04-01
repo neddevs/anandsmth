@@ -1,0 +1,60 @@
+{
+  "name": "bhakti-bhoomi",
+  "version": "1.0.0",
+  "description": "Anandmaya - Spiritual Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "test:middleware": "node test-middleware.js",
+    "test:integration": "node test-middleware.js",
+    "setup": "node setup-integration.js",
+    "quick-start": "node quick-start.js",
+    "find-mongodb": "node find-mongodb.js",
+    "get-ip": "node get-my-ip.js",
+    "view-db": "node view-database.js",
+    "test-signup": "node test-signup-flow.js",
+    "test-api-fix": "node test-api-fix.js",
+    "test-api-service": "node test-api-service.js",
+    "check-connection": "node check-connection.js",
+    "fix-mongodb": "node fix-mongodb-connection.js",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd backend && npm start",
+    "frontend": "react-scripts start"
+  },
+  "dependencies": {
+    "@react-oauth/google": "^0.12.2",
+    "axios": "^1.6.0",
+    "concurrently": "^8.2.0",
+    "framer-motion": "^10.18.0",
+    "html-webpack-plugin": "^5.5.0",
+    "lodash": "^4.17.21",
+    "node-fetch": "^3.3.2",
+    "pdfjs-dist": "^3.4.120",
+    "razorpay": "^2.9.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.6.0",
+    "react-icons": "^4.7.1",
+    "react-lite-youtube-embed": "^3.3.3",
+    "react-pdf": "^10.2.0",
+    "react-router-dom": "^6.8.0",
+    "react-scripts": "5.0.1",
+    "react-slick": "^0.31.0",
+    "slick-carousel": "^1.8.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
