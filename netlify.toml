@@ -12,3 +12,8 @@
   
   # This is important to ensure the proxy works correctly
   force = true
+
+  [[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
